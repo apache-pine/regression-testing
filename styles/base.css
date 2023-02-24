@@ -1,0 +1,639 @@
+/* https://coolors.co/052639-117fa6-91d9f3-7e9339-afc841 */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+
+:root {
+    --primary-color: #052639;
+    --secondary-color: #117FA6;
+    --accent1-color: #91D9F3;
+    --accent2-color: #7E9339;
+    --accent3-color: #AFC841;
+
+    --heading-font: "Roboto", Arial, sans-serif;
+    --paragraph-font: "Oswald", Helvetica, sans-serif;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--paragraph-font);
+}
+
+main {
+    max-width: 780px;
+    margin: 1rem auto;
+    line-height: 1.5;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+
+button {
+    background-color: var(--secondary-color);
+    padding: 12px 24px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 1rem;
+}
+
+.banner {
+    display: none;
+    text-align: center;
+    padding: .25rem 2rem;
+    background-color: var(--accent3-color);
+    color: var(--primary-color);
+}
+
+.banner.open {
+    display: block;
+}
+
+.logo-header {
+    justify-self: center;
+    align-self: center;
+    padding: 1rem;
+    height: auto;
+    width: 80%;
+    max-width: 100px;
+}
+
+.site-name {
+    grid-column: 2 / 4;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+.site-name h1, div {
+    padding: 0;
+    margin: 0;
+}
+
+#social {
+    grid-column: 4 / 5;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+}
+
+.currentDate {
+    grid-column: span 5;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: .7rem;
+    margin: 0 1rem 1rem 1rem;
+    border: 2px solid var(--accent1-color);
+    text-align: center;
+}
+
+nav {
+    grid-column: span 5;
+}
+
+#hamBtn {
+    border: 1px solid white;
+    font-size: 2rem;
+    width: 42px;
+    height: 42px;
+    justify-self: center;
+    align-self: center;
+    padding: 0;
+}
+
+#hamBtn span:nth-child(1) {
+    display: block;
+}
+
+#hamBtn span:nth-child(2) {
+    display: none;
+}
+
+#hamBtn.open span:nth-child(1) {
+    display: none;
+}
+
+#hamBtn.open span:nth-child(2) {
+    display: block;
+}
+
+nav ul {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul.open {
+    display: block;
+}
+
+nav ul li a {
+    display: block;
+    padding: .8rem 2vw;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(0,0,0,0.5);
+}
+
+nav ul li a:hover {
+    background-color: var(--accent3-color);
+    color: black;
+}
+
+.hero-div {
+    margin: 10px auto;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.5);
+    height: 200px;
+}
+
+.hero-div img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.hero-div h2 {
+    position: absolute;
+    top: 1px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0,0,0,0.3);
+    padding: 5px 13px;
+    border: rgba(0,0,0,0.5);
+}
+
+.hero-div button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.def-div {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    margin: 1rem auto;
+    box-shadow: 0 0 25px 2px black;
+}
+
+.event {
+    padding: .5rem 3rem;
+}
+
+.def-div h3 {
+    font-size: 1.5rem;
+    color: var(--accent3-color);
+    margin: 0;
+    padding-top: 1rem;
+}
+
+.subheading {
+    font-size: 1.25rem;
+    padding: .75rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    color: white;
+}
+
+.weather {
+    width: 90%;
+    padding: 5%;
+}
+
+.weather p {
+    margin: 0;
+}
+
+#weatherIcon {
+    height: auto;
+    max-width: 120%;
+}
+
+#temp {
+    font-size: 200%;
+}
+
+.temp-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#condition {
+    font-size: 120%;
+    padding-bottom: .5rem;
+}
+
+#wind-speed {
+    padding-top: 1rem;
+}
+
+hr {
+    border-top: 2px solid rgba(0,0,0,0.5);
+}
+
+.news {
+    padding: 0 3rem 1rem 3rem;
+}
+
+.news h3, .event h3 {
+    padding-bottom: 1rem;
+}
+
+.spotlight-sec {
+    padding: .5rem;
+}
+
+.spotlight, .card {
+    max-width: 90%;
+    border: 1px solid rgba(0,0,0,0.1);
+    margin: 1rem auto;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 20px 1px #aaa;
+}
+
+.spotlight h3, .card h3 {
+    background-color: var(--primary-color);
+    padding: .3rem;
+}
+
+.spotlight img {
+    height: auto;
+    max-width: 40%;
+    margin: .5rem;
+}
+
+.spotlight1, .spotlight2 {
+    padding: .5rem;
+    margin: 1rem;
+    width: 100%;
+    padding: 0 0 .5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spotlight hr {
+    width: 97%;
+}
+
+.spotlight h3 {
+    width: 98%;
+}
+
+.whiteBackground, #card2 img, #card4 img, #card5 img {
+    background-color: white;
+    padding: 2.5rem 1rem;
+}
+
+#card3 img, .creeksidePT {
+    background-color: white;
+    padding: .5rem;
+}
+
+.extraPadding, #card4 img, #card8 img, #card9 img {
+    padding: 1rem;
+}
+
+.spotlight-tagline, .slogan {
+    font-style: italic;
+}
+
+.spotlight a, .card a {
+    color: white;
+    text-decoration: none;
+}
+
+.spotlight3 {
+    display: none;
+}
+
+.join-us {
+    display: none;
+}
+
+#footer-site-info {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+#footer-site-info p {
+    margin: 0.2rem;
+}
+
+.logo-footer {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    height: auto;
+    width: 80%;
+    max-width: 100px;
+}
+
+#footer-site-name {
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: .3rem;
+}
+
+.join-footer-site-name {
+    font-size: 1.2rem;
+}
+
+#footer-addr {
+    font-style: italic;
+    padding-bottom: 1rem;
+}
+
+#footer-loc a {
+    text-decoration: none;
+    color: white;
+}
+
+.true-footer {
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+}
+
+.true-footer a {
+    color: white;
+}
+
+/* Start of discover page */
+
+.discover {
+    display: flex;
+    flex-direction: column;
+}
+
+img[data-src] {
+    min-width: 50px;
+    min-height: 50px;
+    filter: blur(0.2em);
+}
+
+.dis-image {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    filter: blur(0em);
+    transition: filter 1s;
+    border-radius: 1rem;
+    transition: all .8s;
+    box-shadow: 0px 0px 10px 1px black;
+}
+
+.discover section {
+    background-color: var(--accent2-color);
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 1px 1px 10px black;
+}
+
+.discover h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.discover h3 {
+    text-align: center;
+}
+
+form fieldset {
+    margin: 1rem auto;
+    border: 1px solid var(--secondary-color);
+    border-radius: .5rem;
+    padding: .5rem;
+    max-width: 80%;
+}
+
+form legend {
+    color: var(--secondary-color);
+    margin: 0 1rem;
+    padding: 0 .5rem;
+}
+
+form label.top {
+    display: block;
+    padding-top: 1rem;
+}
+
+form label.top input, form textarea {
+    display: block;
+    font-size: 1rem;
+    border: solid 1px black;
+    border-radius: 4px;
+    padding: .75rem;
+    color: #555;
+    background-color: rgba(0,0,0,0.1);
+    width: 86%;
+}
+
+form label.sbs {
+    display: block;
+    padding: .75rem 0;
+    color: #555;
+}
+
+form input.form-button {
+    display: flex;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 1rem auto;
+    justify-self: center;
+    justify-content: center;
+    width: 84%;
+}
+
+form label.top input:required {
+    border-left: red solid 6px;
+}
+
+form label.top input:required:valid {
+    border-left: green solid 6px;
+}
+
+.mem-desc {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem auto;
+    background-color: var(--primary-color);
+    color: white;
+    max-width: 78%;
+}
+
+fieldset > * {
+    margin: 0 1rem;
+}
+
+.mem-desc h2 {
+    font-size: 1rem;
+    margin-bottom: .25rem;
+}
+
+.mem-desc p {
+    font-size: .75rem;
+    margin-top: 0;
+}
+
+.thank-you-main h2 {
+    text-align: center;
+}
+
+/* start of directory page */
+
+.top-heading {
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: var(--accent3-color);
+    border-radius: .75rem;
+    text-align: center;
+}
+
+.sort {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.sort button {
+    margin: 0 1rem .75rem 1rem;
+}
+
+.card {
+    height: 95%;
+    width: 90%;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	align-items: center;
+}
+
+.grid .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: .5rem;
+}
+
+.grid .card div {
+    width: 100%;
+    height: 25%;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+.grid .card hr {
+    width: 97%;;
+}
+
+.grid .card p {
+    margin: 0;
+}
+
+.grid .cardImage {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid .cardImage img, .spotlight img {
+    max-width: 80%;
+    height: auto;
+}
+
+.grid .slogan, .spotlight-tagline {
+    margin-top: 2rem;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+}
+
+.list .card {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    grid-template-rows: 1fr;
+	align-items: center;
+}
+
+.list .card img {
+    display: none;
+}
+
+.list .card .slogan {
+    display: none;
+}
+
+.list .card hr {
+    display: none;
+}
+
+.list .card h3 {
+    font-size: .85rem;
+    margin: .25rem;
+    width: 150%;
+}
+
+.list .card p, .list .card a {
+    font-size: .75rem;
+    padding: .5rem;
+}
+
+/* start of contact page */
+
+#questionComment {
+    margin-bottom: 1rem;
+}
+
+iframe {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.chamber-map, .office-hours, .contact-info {
+    padding: 1rem;
+}
+
+.contact-info a {
+    color: white;
+}
