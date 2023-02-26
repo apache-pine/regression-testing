@@ -14,8 +14,8 @@ async function getSpotlight() {
         };
         let random = 0;
         let max = spotlightOptions.length;
-        for (let i = 0; i < 3; i++) {
-            random = spotlightOptions[Math.floor(Math.random() * max)];
+        for (let i = 0; i < 4; i++) {
+            random = spotlightOptions[Math.floor(Math.random() * spotlightOptions.length)];
             spotlightOptions.push(spotlightOptions[random]);
             spotlightOptions.splice(spotlightOptions.indexOf(random), 1);
             max--;
